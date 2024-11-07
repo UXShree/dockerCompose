@@ -18,15 +18,14 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./html:/usr/local/apache2/htdocs/
-
+      - ./html1:/usr/local/apache2/htdocs/
   httpd_2:
     image: httpd:latest
     container_name: apache_httpd_2
     ports:
-      - "8085:80"
+      - "8082:80"
     volumes:
-      - ./html1:/usr/local/apache2/htdocs/
+      - ./html2:/usr/local/apache2/htdocs/
   
   jenkins:
     image: jenkins/jenkins:lts
